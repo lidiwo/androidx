@@ -3,23 +3,16 @@ plugins {
     id("maven-publish")
 }
 
-
 publishing {
     repositories {
-        maven {
-            isAllowInsecureProtocol = true
-            url =  uri("")
-            credentials {
-                username = ""
-                password = ""
-            }
-        }
         publications {
-            create<MavenPublication>("config") {
-                afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
-                groupId = ""
-                artifactId = ""
-                version =""
+            create<MavenPublication>("release") {
+                afterEvaluate {
+                    from(components["release"])
+                }
+                groupId = "com.lidiwo"
+                artifactId = "androidx"
+                version ="0.0.1"
             }
         }
     }
@@ -27,6 +20,11 @@ publishing {
 
 
 android {
+    publishing {
+        singleVariant("release") {
+        }
+    }
+
     namespace = "androidx.studio"
     compileSdk = 34
 
