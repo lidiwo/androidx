@@ -13,8 +13,10 @@ rxjava3 = "3.1.8"
 rxandroid3 = "3.0.2"
 eventbus = "3.3.1"
 okhttp = "4.12.0"
+androidx = "1.0.0"
 
 [libraries]
+
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -28,6 +30,9 @@ rxjava3 = { group = "io.reactivex.rxjava3", name = "rxjava", version.ref = "rxja
 rxandroid3 = { group = "io.reactivex.rxjava3", name = "rxandroid", version.ref = "rxandroid3" }
 eventbus = { group = "org.greenrobot", name = "eventbus", version.ref = "eventbus" }
 okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+
+
+androidx = { module = "com.lidiwo:androidx", version.ref = "androidx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

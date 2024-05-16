@@ -38,7 +38,7 @@ android {
 
 dependencies {
 
-    implementation(project(":studio"))
+//    implementation(project(":studio"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -46,7 +46,7 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
-
+    implementation(libs.androidx)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
