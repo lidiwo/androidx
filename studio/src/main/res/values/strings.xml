@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="expires_title">过期提醒</string>
+    <string name="trial_period_expired">试用已到期，请联系开发者！！！</string>
+    <string name="contact_way">查看联系方式</string>
+</resources>
