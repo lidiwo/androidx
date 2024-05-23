@@ -5,14 +5,14 @@ plugins {
 
 android {
     namespace = "android.appcompat.test"
-    compileSdk = 34
+    compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
         applicationId = "android.appcompat.test"
-        minSdk = 26
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        minSdk = libs.versions.minSdk.get().toInt()
+        targetSdk =libs.versions.targetSdk.get().toInt()
+        versionCode = libs.versions.versionCode.get().toInt()
+        versionName = libs.versions.versionCode.get()
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -38,7 +38,8 @@ android {
 
 dependencies {
 
-//    implementation(project(":studio"))
+    implementation(project(":studio"))
+//    implementation(libs.androidx)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -46,7 +47,7 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
-    implementation(libs.androidx)
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
