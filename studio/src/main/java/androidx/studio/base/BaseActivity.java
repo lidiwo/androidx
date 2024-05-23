@@ -19,7 +19,7 @@ public abstract class BaseActivity<T extends ViewBinding> extends AppCompatActiv
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        AuthUtil.openAuth(this);
+//        AuthUtil.openAuth(this)
         mBinding = getViewBinding();
         setContentView(mBinding.getRoot());
         if (useEventBus() && !EventBus.getDefault().isRegistered(this)) {
